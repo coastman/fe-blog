@@ -7,8 +7,10 @@
 
 <style lang="less" scoped>
   .title {
+    color: @red;
     .content {
-      color: blueviolet;
+      color: @green;
+      .text-overflow();
     }
   }
 </style>
