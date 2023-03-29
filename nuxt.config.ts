@@ -1,13 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   css: [
-    '@/styles/normalize.css'
+    '@/assets/styles/app.less'
   ],
   vite: {
     css: {
       preprocessorOptions: {
         less: {
-          additionalData: ['@import "@/styles/variables.less";', '@import "@/styles/mixins.less";'].join('')
+          additionalData: ['@import "@/assets/styles/variables.less";', '@import "@/assets/styles/mixins.less";'].join('')
         }
       }
     }

@@ -1,0 +1,36 @@
+.theme(@body-bg, @header-bg, @header-border, @primary-color, @font-color, @theme-logo-rotate) {
+  --body-bg: @body-bg;
+  --header-bg: @header-bg;
+  --header-border: @header-border;
+  --primary-color: @primary-color;
+  --font-color: @font-color;
+  --theme-logo-rotate: @theme-logo-rotate;
+}
+
+:root {
+  &.default {
+    .theme(
+      #f2f3f5,
+      #FFF,
+      #f1f1f1,
+      #1e80ff,
+      #000,
+      none
+    )
+  }
+
+  &.dark {
+    .theme(
+      rgba(0, 0, 0, .92),
+      #000,
+      #000,
+      #FFF,
+      #FFF,
+      hue-rotate(180deg) brightness(300%) grayscale(100%)
+    )
+  }
+}
+
+body {
+  background: @body-bg;
+}
