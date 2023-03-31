@@ -1,3 +1,3 @@
 <template>
-  <h3>list.vue</h3>
+  <div>list.vue</div>
 </template>

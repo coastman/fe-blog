@@ -11,5 +11,19 @@ export default defineNuxtConfig({
         }
       }
     }
+  },
+  nitro: {
+    devProxy: {
+      '/api/**': {
+        target: 'http://localhost:3008/api/**',
+        changeOrigin: true,
+        prependPath: true,
+      },
+    },
+    routeRules: {
+      '/api/**': {
+        proxy: 'http://localhost:3008/api/**'
+      }
+    }
   }
 })

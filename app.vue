@@ -11,4 +11,5 @@
 
 <script setup lang="ts">
 const theme = useTheme();
+if (!theme.value) theme.value = 'default';
 </script>

@@ -1,10 +1,19 @@
-.theme(@body-bg, @header-bg, @header-border, @primary-color, @font-color, @theme-logo-rotate) {
+.theme(
+    @body-bg, 
+    @header-bg,
+    @header-border,
+    @primary-color,
+    @theme-logo-rotate,
+    @text-color,
+    @module-bg
+  ) {
   --body-bg: @body-bg;
   --header-bg: @header-bg;
   --header-border: @header-border;
   --primary-color: @primary-color;
-  --font-color: @font-color;
   --theme-logo-rotate: @theme-logo-rotate;
+  --text-color: @text-color;
+  --module-bg: @module-bg;
 }
 
 :root {
@@ -14,9 +23,10 @@
       #FFF,
       #f1f1f1,
       #1e80ff,
+      none,
       #000,
-      none
-    )
+      rgba(255, 255, 255, .3)
+    );
   }
 
   &.dark {
@@ -25,12 +35,25 @@
       #000,
       #000,
       #FFF,
+      hue-rotate(180deg) brightness(300%) grayscale(100%),
       #FFF,
-      hue-rotate(180deg) brightness(300%) grayscale(100%)
-    )
+      rgba(0, 0, 0, .3)
+    );
   }
 }
 
 body {
   background: @body-bg;
+  color: @text-color;
 }
+
+a {
+  color: @text-color;
+  opacity: .6;
+  font-size: 14px;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
