@@ -24,6 +24,7 @@
             :key="index"
             :to="item.link"
           >
+            <i :class="['iconfont', item.iconfont]" />
             {{ item.text }}
           </NuxtLink>
         </div>
@@ -47,26 +48,31 @@ const historyTheme = useCookie('theme', { maxAge: 2626560 });
 const list = ref([
   {
     text: '明殿',
-    link: '/'
+    link: '/',
+    iconfont: 'icon-shouye'
   },
   {
     text: '宁静寺',
-    link: '/list'
+    link: '/code',
+    iconfont: 'icon-code'
   },
   {
     text: '无色庵',
-    link: '/list'
-  },
-  {
-    text: '丹青阁',
-    link: '/list'
-  },
-  {
-    text: '狂浪生',
-    link: '/list'
+    link: '/mind',
+    iconfont: 'icon-caozuo_chuangxiang'
   },
   {
     text: '四方馆',
+    link: '/comments',
+    iconfont: 'icon-pinglun'
+  },
+  {
+    text: '狂浪生',
+    link: '/me',
+    iconfont: 'icon-wo2'
+  },
+  {
+    text: '丹青阁',
     link: '/list'
   },
   {
@@ -164,7 +170,8 @@ const handleToggleTheme = () => {
       color: @text-color;
       display: flex;
       align-items: center;
-      justify-content: center;
+      // justify-content: center;
+      padding-left: 14px;
       opacity: .5;
       margin-bottom: 10px;
 
@@ -179,6 +186,10 @@ const handleToggleTheme = () => {
         opacity: 1;
         background-color: @header-bg;
         color: @primary-color;
+      }
+
+      .iconfont {
+        margin-right: 16px;
       }
     }
   }
