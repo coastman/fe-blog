@@ -6,20 +6,22 @@
 
     <div class="article-list">
       <div class="article-item" v-for="(item, index) in list" :key="item.id">
-        <div class="item">
-          <div class="image-box">
-            <img src="@/assets/img/leave-china.webp" alt="">
-          </div>
-          <div class="item-body">
-            <div class="title">
-              <div class="title-main">{{ item.title }}</div>
-              <div class="description">{{ item.description }}</div>
+        <NuxtLink :to="`/article/${item.id}`">
+          <div class="item">
+            <div class="image-box">
+              <img src="@/assets/img/leave-china.webp" alt="">
             </div>
-            <div class="meta">
-  
+            <div class="item-body">
+              <div class="title">
+                <div class="title-main">{{ item.title }}</div>
+                <div class="description">{{ item.description }}</div>
+              </div>
+              <div class="meta">
+    
+              </div>
             </div>
           </div>
-        </div>
+        </NuxtLink>
       </div>
     </div>
   </div>
