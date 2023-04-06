@@ -1,6 +1,10 @@
 <template>
   <div class="article-detail">
-    <div class="title">{{ detail.title }}</div>
+    <div class="title">
+      <h2>
+        {{ detail.title }}
+      </h2>
+    </div>
     <div class="content" v-html="markdown.render(detail.content)">
     </div>
   </div>
@@ -86,6 +90,17 @@ detail.content = `
 
   :deep(img) {
     width: 100%;
+  }
+  :deep(p) {
+    // text-indent: 20px;
+  }
+}
+
+.article-detail {
+  padding: 10px 20px;
+  background-color: @header-bg;
+  .title {
+    text-align: center;
   }
 }
 </style>

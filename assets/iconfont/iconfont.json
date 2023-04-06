@@ -6,6 +6,41 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "1307",
+      "name": "应用中心",
+      "font_class": "yingyongzhongxin",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "1727450",
+      "name": "217时间",
+      "font_class": "shijian",
+      "unicode": "e8c5",
+      "unicode_decimal": 59589
+    },
+    {
+      "icon_id": "7588132",
+      "name": "消息",
+      "font_class": "xiaoxi",
+      "unicode": "e626",
+      "unicode_decimal": 58918
+    },
+    {
+      "icon_id": "8765213",
+      "name": "查看",
+      "font_class": "chakan",
+      "unicode": "e62f",
+      "unicode_decimal": 58927
+    },
+    {
+      "icon_id": "11372758",
+      "name": "点赞",
+      "font_class": "dianzan",
+      "unicode": "e8c3",
+      "unicode_decimal": 59587
+    },
+    {
       "icon_id": "1228",
       "name": "首页",
       "font_class": "shouye",

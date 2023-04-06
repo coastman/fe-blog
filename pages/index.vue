@@ -17,7 +17,11 @@
                 <div class="description">{{ item.description }}</div>
               </div>
               <div class="meta">
-    
+                <span><i class="iconfont icon-shijian"></i>5个月前</span>
+                <span><i class="iconfont icon-chakan"></i>66</span>
+                <span><i class="iconfont icon-xiaoxi"></i>4</span>
+                <span><i class="iconfont icon-dianzan"></i>1</span>
+                <span><i class="iconfont icon-yingyongzhongxin"></i>无色庵</span>
               </div>
             </div>
           </div>
@@ -84,10 +88,25 @@ const list = ref((res as any).data.list);
     .item-body {
       flex: 1;
 
+      .title {
+        margin-bottom: 50px;
+      }
+
       .title-main {
-        font-size: 18px;
-        font-weight: 800;
-        margin-bottom: 10px;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 16px;
+      }
+
+      .meta {
+        // display: flex;
+        span + span {
+          margin-left: 42px;
+        }
+        span {
+          i { margin-right: 8px; }
+        }
+        // justify-content: space-between;
       }
     }
   }

@@ -9,7 +9,7 @@
 
         <div class="tool-box">
           <button class="tooggle-theme" @click="handleToggleTheme">
-            <i :class="['iconfont', theme === 'default' ? 'icon-sun' : 'icon-moon']" />
+            <i :class="['iconfont', theme === 'default' ? 'icon-sun-f' : 'icon-moon']" />
           </button>
         </div>
       </div>
@@ -197,5 +197,14 @@ const handleToggleTheme = () => {
   .right-box {
     flex: 1;
   }
+}
+
+.footer {
+  margin-top: 20px;
+  background-color: @header-bg;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>
