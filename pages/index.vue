@@ -1,7 +1,30 @@
 <template>
   <div class="article">
     <div class="carousel">
-      <img src="@/assets/img/straw-man.webp" alt="">
+      <swiper
+        :modules="[SwiperAutoplay, SwiperEffectCreative, SwiperNavigation]"
+        :slides-per-view="1"
+        :loop="true"
+        :effect="'creative'"
+        :autoplay="{
+          delay: 8000,
+          disableOnInteraction: true,
+        }"
+        :navigation="{}"
+        :creative-effect="{
+          prev: {
+            shadow: false,
+            translate: ['-20%', 0, -1],
+          },
+          next: {
+            translate: ['100%', 0, 0],
+          },
+        }"
+      >
+        <swiper-slide v-for="slide in 10" :key="slide">
+          <img src="@/assets/img/straw-man.webp" alt="">
+        </swiper-slide>
+      </swiper>
     </div>
 
     <div class="article-list">
@@ -9,7 +32,7 @@
         <NuxtLink :to="`/article/${item.id}`">
           <div class="item">
             <div class="image-box">
-              <img src="@/assets/img/leave-china.webp" alt="">
+              <img :src="`http://127.0.0.1:3008${item.thumbnailUrl}`" alt="">
             </div>
             <div class="item-body">
               <div class="title">
@@ -34,7 +57,6 @@
 <script setup lang="ts">
 import { article } from '@/api';
 import { $http } from '@/composables/http';
-
 const res = await $http(article, { params: { page: 1, pageSize: 10 }}) || {};
 const list = ref((res as any).data.list);
 </script>

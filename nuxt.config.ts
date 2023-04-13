@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   css: [
     '@/assets/styles/app.less'
   ],
+  modules: ['nuxt-swiper'],
   vite: {
     css: {
       preprocessorOptions: {
@@ -18,7 +19,7 @@ export default defineNuxtConfig({
         target: 'http://localhost:3008/api/**',
         changeOrigin: true,
         prependPath: true,
-      },
+      }
     },
     routeRules: {
       '/api/**': {
