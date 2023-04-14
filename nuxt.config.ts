@@ -1,9 +1,20 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  ssr: true,
+
   css: [
     '@/assets/styles/app.less'
   ],
+
   modules: ['nuxt-swiper'],
+
+  swiper: {
+    // Swiper options
+    prefix: 'Swiper',
+    styleLang: 'css',
+    modules: ['navigation', 'pagination', 'autoplay', 'effect-creative'],
+  },
+
   vite: {
     css: {
       preprocessorOptions: {
@@ -13,6 +24,7 @@ export default defineNuxtConfig({
       }
     }
   },
+
   nitro: {
     devProxy: {
       '/api/**': {

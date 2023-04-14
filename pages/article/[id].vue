@@ -32,7 +32,7 @@ const markdown = new MarkdownIt({
 });
 const route = useRoute();
 const res = await $http(`${article}/${route.params.id}`, {}) || {};
-const detail = res.data.result;
+const detail = (res as any).data.result;
 detail.content = `
 ![](http://localhost:3000/_nuxt/assets/img/leave-china.webp)
 

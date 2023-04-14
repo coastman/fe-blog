@@ -2,15 +2,18 @@
   <div class="article">
     <div class="carousel">
       <swiper
-        :modules="[SwiperAutoplay, SwiperEffectCreative, SwiperNavigation]"
+        class="swiper"
+        :modules="[SwiperAutoplay, SwiperEffectCreative, SwiperPagination, SwiperNavigation]"
         :slides-per-view="1"
         :loop="true"
         :effect="'creative'"
+        :pagination="{
+          clickable: true
+        }"
         :autoplay="{
-          delay: 8000,
+          delay: 3500,
           disableOnInteraction: true,
         }"
-        :navigation="{}"
         :creative-effect="{
           prev: {
             shadow: false,
@@ -21,8 +24,8 @@
           },
         }"
       >
-        <swiper-slide v-for="slide in 10" :key="slide">
-          <img src="@/assets/img/straw-man.webp" alt="">
+        <swiper-slide v-for="(item, index) in list" :key="item.id">
+          <img :src="`http://127.0.0.1:3008${item.thumbnailUrl}`" alt="">
         </swiper-slide>
       </swiper>
     </div>
@@ -65,10 +68,33 @@ const list = ref((res as any).data.list);
 .carousel {
   width: 100%;
   margin-bottom: 20px;
+  height: 230px;
+  overflow: hidden;
+
+  .swiper {
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+
+    :deep(.swiper-pagination-bullet) {
+      width: 10px;
+      background-color: rgba(255, 255, 255);
+      opacity: .5;
+      border-radius: 1px;
+    }
+  
+    :deep(.swiper-pagination-bullet-active) {
+      width: 20px;
+      background-color: #FFF;
+      opacity: 1;
+      border-radius: 2px;
+    }
+  }
 
   img {
     width: 100%;
     object-fit: contain;
+    height: auto
   }
 }
 
