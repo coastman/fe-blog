@@ -44,7 +44,7 @@
               </div>
               <div class="meta">
                 <span><i class="iconfont icon-shijian"></i>5个月前</span>
-                <span><i class="iconfont icon-chakan"></i>66</span>
+                <span><i class="iconfont icon-chakan"></i>{{ item.viewCount }}</span>
                 <span><i class="iconfont icon-xiaoxi"></i>4</span>
                 <span><i class="iconfont icon-dianzan"></i>1</span>
                 <span><i class="iconfont icon-yingyongzhongxin"></i>无色庵</span>

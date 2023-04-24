@@ -5,7 +5,8 @@
     @primary-color,
     @theme-logo-rotate,
     @text-color,
-    @module-bg
+    @module-bg,
+    @article-text-color
   ) {
   --body-bg: @body-bg;
   --header-bg: @header-bg;
@@ -14,6 +15,7 @@
   --theme-logo-rotate: @theme-logo-rotate;
   --text-color: @text-color;
   --module-bg: @module-bg;
+  --article-text-color: @article-text-color;
 }
 
 :root {
@@ -25,7 +27,8 @@
       #1e80ff,
       none,
       #000,
-      rgba(255, 255, 255, .3)
+      rgba(255, 255, 255, .3),
+      rgba(0, 0, 0, .68)
     );
   }
 
@@ -37,7 +40,8 @@
       #FFF,
       hue-rotate(180deg) brightness(300%) grayscale(100%),
       #FFF,
-      rgba(0, 0, 0, .3)
+      rgba(0, 0, 0, .3),
+      #f0f0f0
     );
   }
 }
